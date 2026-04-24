@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portafolio profesional de grado — Maestría en Intervención en la Práctica Educativa. Evidencias, competencias y proyectos académicos." />
+  <meta name="author" content="Estudiante MIS" />
+  <title>Portafolio Profesional</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Barra de progreso de scroll -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- ============================================
+       NAVBAR
+       ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#home" class="navbar__logo" id="navLogo">
+        <i class="fa-solid fa-graduation-cap"></i>Portafolio MIS
+      </a>
+
+      <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navbar__menu" id="navbarMenu">
+        <a href="#home" class="navbar__link active">Inicio</a>
+        <a href="#portafolio" class="navbar__link">Portafolio</a>
+        <a href="#contacto" class="navbar__link">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dots de navegación lateral -->
+  <div class="section-dots" id="sectionDots">
+    <button class="section-dot active" data-section="home" data-tooltip="Inicio"
+      onclick="document.getElementById('home').scrollIntoView({behavior:'smooth'})" aria-label="Ir a Inicio"></button>
+    <button class="section-dot" data-section="portafolio" data-tooltip="Portafolio"
+      onclick="document.getElementById('portafolio').scrollIntoView({behavior:'smooth'})"
+      aria-label="Ir a Portafolio"></button>
+    <button class="section-dot" data-section="contacto" data-tooltip="Contacto"
+      onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})"
+      aria-label="Ir a Contacto"></button>
+  </div>
+
+  <!-- ============================================
+       HERO / HOME
+       ============================================ -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero__content">
+        <!-- Texto -->
+        <div class="hero__text">
+          <div class="hero__badge">
+            <i class="fa-solid fa-sparkles"></i>
+            Especialidad docente
+          </div>
+          <h1 class="hero__title">
+            Portafolio de<br />
+            <span class="highlight">Grado Profesional</span>
+          </h1>
+          <p class="hero__subtitle">
+            Compilación de evidencias, competencias y experiencias de aprendizaje
+            desarrolladas a lo largo de la especialidad docente. Un reflejo del compromiso con
+            la excelencia educativa y la innovación pedagógica.
+          </p>
+          <div class="hero__actions">
+            <a href="#portafolio" class="btn btn--primary" id="heroExploreBtn">
+              <i class="fa-solid fa-compass"></i>
+              Explorar portafolio
+            </a>
+            <a href="#contacto" class="btn btn--outline" id="heroContactBtn">
+              <i class="fa-solid fa-envelope"></i>
+              Contacto
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen / Blob -->
+        <div class="hero__image-wrapper">
+          <div class="hero__image-container">
+            <div class="hero__image-blob">
+              <i class="fa-solid fa-book-open-reader"></i>
+            </div>
+            <!-- Tarjetas flotantes -->
+            <div class="hero__floating-card hero__floating-card--top">
+              <i class="fa-solid fa-award"></i>
+              8 Asignaturas
+            </div>
+            <div class="hero__floating-card hero__floating-card--bottom">
+              <i class="fa-solid fa-file-lines"></i>
+              Evidencias verificadas
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PORTAFOLIO — SECCIONES DE MATERIAS
+       ============================================ -->
+  <section class="section" id="portafolio">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__icon">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <h2 class="section__title">Portafolio Académico</h2>
+        <p class="section__subtitle">
+          Selecciona una materia para explorar las competencias desarrolladas,
+          información de la asignatura y las evidencias de aprendizaje.
+        </p>
+      </div>
+
+      <!-- Grid de tarjetas (se renderiza con JS) -->
+      <div class="subjects-grid" id="subjectsGrid">
+        <!-- Las tarjetas se generan dinámicamente con JavaScript -->
+      </div>
+
+      <!-- Vista detalle de materia (se muestra/oculta con JS) -->
+      <div class="subject-detail" id="subjectDetail">
+        <!-- El contenido se genera dinámicamente con JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACTO
+       ============================================ -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="section__header reveal">
+        <div class="section__icon">
+          <i class="fa-solid fa-paper-plane"></i>
+        </div>
+        <h2 class="section__title">Contacto</h2>
+        <p class="section__subtitle">
+          <!-- ¿Tienes alguna pregunta o comentario sobre este portafolio?
+          No dudes en ponerte en contacto. -->
+        </p>
+      </div>
+
+      <div class="contact__grid">
+        <!-- Info de contacto -->
+        <div class="contact__info reveal">
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact__item-text">
+              <h4>Correo electrónico</h4>
+              <p>sem@um.edu.mx</p>
+            </div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact__item-text">
+              <h4>Institución</h4>
+              <p>Universidad de Montemorelos</p>
+            </div>
+          </div>
+          <div class="contact__item">
+            <div class="contact__item-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact__item-text">
+              <h4>Teléfono</h4>
+              <p>817900260</p>
+            </div>
+          </div>
+          <div class="contact__item">
+            <!-- <div class="contact__item-icon">
+              <i class="fa-brands fa-linkedin"></i>
+            </div> -->
+            <!-- <div class="contact__item-text">
+              <h4>LinkedIn</h4>
+              <p>linkedin.com/in/tu-perfil</p>
+            </div> -->
+          </div>
+        </div>
+
+        <!-- Formulario de contacto -->
+        <form class="contact__form reveal reveal-delay-2" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Nombre completo</label>
+            <input type="text" id="contactName" placeholder="Tu nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Correo electrónico</label>
+            <input type="email" id="contactEmail" placeholder="tu@correo.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contactMessage">Mensaje</label>
+            <textarea id="contactMessage" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" id="contactSubmitBtn">
+            <i class="fa-solid fa-paper-plane"></i>
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">
+        © 2025–2026 Portafolio Profesional. Hecho con <i class="fa-solid fa-heart"></i> y dedicación.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       MODAL PARA EVIDENCIAS
+       ============================================ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal">
+      <div class="modal__header">
+        <h3 class="modal__title" id="modalTitle">Evidencia</h3>
+        <button class="modal__close" onclick="closeModal()" aria-label="Cerrar modal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <div class="modal__body" id="modalBody">
+        <!-- Contenido dinámico -->
+      </div>
+      <div class="modal__footer" id="modalFooter">
+        <!-- Acciones dinámicas -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón volver arriba -->
+  <button class="scroll-top" id="scrollTopBtn" aria-label="Volver arriba">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
